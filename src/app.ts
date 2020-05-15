@@ -1,4 +1,5 @@
 import express, { Application } from 'express'
+import UserRouter from './routes/user'
 
 export interface App {
     listen(port: number): void;
@@ -19,7 +20,8 @@ export default class ExpressApp implements App {
     }
 
     private setupRoutes (): void {
-      this.application.get('/', (req, res) => res.send('helo workd'))
+      const userRouter = new UserRouter()
+      this.application.use('/user', userRouter.instance)
     }
 
     listen (port: number): void {
