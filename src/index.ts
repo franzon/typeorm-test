@@ -1,8 +1,8 @@
 import 'reflect-metadata'
 import Server from './server'
-import App from './app'
+import ExpressApp from './app'
 
-const app = new App()
+const app = new ExpressApp()
 const server = new Server(app)
 
 server.start(Number(process.env.PORT) || 3000)

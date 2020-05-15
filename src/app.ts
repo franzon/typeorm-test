@@ -1,6 +1,10 @@
 import express, { Application } from 'express'
 
-export default class App {
+export interface App {
+    listen(port: number): void;
+}
+
+export default class ExpressApp implements App {
     application: Application
 
     constructor () {
