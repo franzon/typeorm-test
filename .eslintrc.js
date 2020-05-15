@@ -22,6 +22,7 @@ module.exports = {
     'simple-import-sort'
   ],
   rules: {
-    'simple-import-sort/sort': 'error'
+    'simple-import-sort/sort': 'error',
+    'no-useless-constructor': 'off'
   }
 }
