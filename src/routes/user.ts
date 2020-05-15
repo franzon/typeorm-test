@@ -1,7 +1,7 @@
 import { Router } from 'express'
+
 import UserController from '../controllers/user'
-import UserService from '../services/user'
-import UserRepository from '../repositories/user'
+import { container } from '../utils/di/inversify.config'
 
 export default class UserRouter {
   router: Router
@@ -9,11 +9,7 @@ export default class UserRouter {
   constructor () {
     this.router = Router()
 
-    const userController = new UserController(
-      new UserService(
-        new UserRepository()
-      )
-    )
+    const userController = container.resolve(UserController)
 
     this.router.get('/:id', (req, res) => userController.signUp(req, res))
   }

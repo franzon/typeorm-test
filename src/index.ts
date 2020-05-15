@@ -1,6 +1,7 @@
 import 'reflect-metadata'
-import Server from './server'
+
 import ExpressApp from './app'
+import Server from './server'
 
 const app = new ExpressApp()
 const server = new Server(app)

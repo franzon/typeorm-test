@@ -1,6 +1,9 @@
 import { Request, Response } from 'express'
+import { injectable } from 'inversify'
+
 import UserService from '../services/user'
 
+@injectable()
 export default class UserController {
     private userService: UserService
 

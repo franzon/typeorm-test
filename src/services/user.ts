@@ -1,5 +1,8 @@
+import { injectable } from 'inversify'
+
 import UserRepository from '../repositories/user'
 
+@injectable()
 export default class UserService {
     private userRepository: UserRepository
 

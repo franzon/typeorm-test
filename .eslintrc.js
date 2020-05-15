@@ -18,8 +18,10 @@ module.exports = {
     sourceType: 'module'
   },
   plugins: [
-    '@typescript-eslint'
+    '@typescript-eslint',
+    'simple-import-sort'
   ],
   rules: {
+    'simple-import-sort/sort': 'error'
   }
 }

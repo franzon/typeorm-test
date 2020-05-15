@@ -1,4 +1,5 @@
 import express, { Application } from 'express'
+
 import UserRouter from './routes/user'
 
 export interface App {

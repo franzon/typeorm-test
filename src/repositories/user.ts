@@ -1,3 +1,6 @@
+import { injectable } from 'inversify'
+
+@injectable()
 export default class UserRepository {
   async getUserById (id: number): Promise<object> {
     return {
